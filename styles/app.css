@@ -113,6 +113,7 @@ body {
 	border-radius: 1rem;
 	padding: 1rem 0;
 	width: 32.6rem;
+	font-family: "YekanBakh Medium";
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -123,14 +124,26 @@ body {
 
 /* overly */
 
-.overly {
-	background-color: rgba(0, 0, 0, .5);
+.overlay {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, .4);
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	inset: 0;
 	z-index: 20;
-	display: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 100ms ease-in;
+}
+
+.overlay--show {
+	opacity: 1;
+	visibility: visible;
 }
 
 /* box */
@@ -143,11 +156,8 @@ body {
 	width: 38.4rem;
 	height: 28.2rem;
 	border-radius: 1.6rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	margin: 20rem auto;
+	text-align: center;
 }
 
 .close-btn {	
@@ -168,7 +178,7 @@ body {
 .box__img {
 	width: 15rem;
 	height: 15rem;
-	margin-bottom: 3rem;
+	margin: 0 auto 3rem 0;
 }
 
 .box__text {
